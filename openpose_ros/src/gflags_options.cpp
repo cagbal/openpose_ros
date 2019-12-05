@@ -14,7 +14,7 @@ DEFINE_bool(disable_multi_thread,       false,          "It would slightly reduc
 DEFINE_int32(profile_speed,             1000,           "If PROFILER_ENABLED was set in CMake or Makefile.config files, OpenPose will show some"
                                                         " runtime statistics at this frame number.");
 // OpenPose
-DEFINE_string(model_folder,             "/path/to/openpose/models/",      "Folder path (absolute or relative) where the models (pose, face, ...) are located.");
+DEFINE_string(model_folder,             "/root/openpose/models",      "Folder path (absolute or relative) where the models (pose, face, ...) are located.");
 DEFINE_string(prototxt_path,            "",             "The combination `--model_folder` + `--prototxt_path` represents the whole path to the"
                                                         " prototxt file. If empty, it will use the default OpenPose ProtoTxt file.");
 DEFINE_string(caffemodel_path,          "",             "The combination `--model_folder` + `--caffemodel_path` represents the whole path to the"
@@ -24,7 +24,7 @@ DEFINE_string(output_resolution,        "-1x-1",        "The image resolution (d
 DEFINE_int32(num_gpu,                   -1,             "The number of GPU devices to use. If negative, it will use all the available GPUs in your"
                                                         " machine.");
 DEFINE_int32(num_gpu_start,             0,              "GPU device start number.");
-DEFINE_int32(keypoint_scale,            0,              "Scaling of the (x,y) coordinates of the final pose data array, i.e., the scale of the (x,y)"
+DEFINE_int32(keypoint_scale,            3,              "Scaling of the (x,y) coordinates of the final pose data array, i.e., the scale of the (x,y)"
                                                         " coordinates that will be saved with the `write_json` & `write_keypoint` flags."
                                                         " Select `0` to scale it to the original source resolution; `1`to scale it to the net output"
                                                         " size (set with `net_resolution`); `2` to scale it to the final output size (set with"
