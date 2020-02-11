@@ -52,7 +52,8 @@ OpenPoseROSIO::OpenPoseROSIO(OpenPose &openPose): nh_("/openpose_ros_node"), it_
 }
 
 void OpenPoseROSIO::processImage(const sensor_msgs::ImageConstPtr& msg)
-{
+{   
+    std::cout<< "msg";
     convertImage(msg);
     std::shared_ptr<std::vector<std::shared_ptr<op::Datum>>> datumToProcess = createDatum();
 
